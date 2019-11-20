@@ -1,0 +1,81 @@
+<html>
+<head><style>
+
+@use postcss-preset-env {
+  stage: 0;
+  browsers: last 2 versions
+}
+
+.horizontal-snap {
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scroll-snap-type: both mandatory;
+  padding-bottom: 1rem;
+  
+  display: grid;
+  grid-template-rows: 50vw 50vw 50vw;
+  grid-template-columns: 50vw 50vw 50vw;
+  gap: 1rem;
+  
+  & > a {
+    scroll-snap-align: center;
+  }
+  
+  & img {
+    width: 50vw;
+    object-fit: contain;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="horizontal-snap">
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Defenders-of-the-moon-tee.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Defenders-of-the-moon-tee.jpg" loading="lazy">
+  </picture></a>
+  
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Statix-Boy-Black-Tee.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Statix-Boy-Black-Tee.jpg" loading="lazy">
+  </picture></a>
+  
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Discover-Paradise-Vintage-Black-Scoop.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Discover-Paradise-Vintage-Black-Scoop.jpg" loading="lazy">
+  </picture></a>
+  
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/The-Archer-Tee-BLACK.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/The-Archer-Tee-BLACK.jpg" loading="lazy">
+  </picture></a>
+  
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Strange-World-Black-Tee.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Strange-World-Black-Tee.jpg" loading="lazy">
+  </picture></a>
+  
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Alchemist-Returns-Tee-BLACK.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Alchemist-Returns-Tee-BLACK.jpg" loading="lazy">
+  </picture></a>
+  
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Shred-Seattle-Tee.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Shred-Seattle-Tee.jpg" loading="lazy">
+  </picture></a>
+  
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/No-Mercy-Vintage-Black-V-Neck.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/No-Mercy-Vintage-Black-V-Neck.jpg" loading="lazy">
+  </picture></a>
+  
+  <a href="https://www.tenhundredart.com/"><picture>
+    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Elephant-Black-Tank.webp 1x">
+    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Elephant-Black-Tank.jpg" loading="lazy">
+  </picture></a>
+</section></body>
+</html>
