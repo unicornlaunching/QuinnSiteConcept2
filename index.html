@@ -1,81 +1,184 @@
+<!DOCTYPE html>
 <html>
-<head><style>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
-@use postcss-preset-env {
-  stage: 0;
-  browsers: last 2 versions
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.horizontal-snap {
-  height: 100vh;
-  width: 100vw;
-  overflow: auto;
-  overscroll-behavior: contain;
-  scroll-snap-type: both mandatory;
-  padding-bottom: 1rem;
-  
-  display: grid;
-  grid-template-rows: 50vw 50vw 50vw;
-  grid-template-columns: 50vw 50vw 50vw;
-  gap: 1rem;
-  
-  & > a {
-    scroll-snap-align: center;
-  }
-  
-  & img {
-    width: 50vw;
-    object-fit: contain;
-  }
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
 }
-</style>
-</head>
-<body>
+  
+  </style>
+  
+  
+  
+<body class="w3-black">
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/10399542_53307188789_7242325_n.jpg?_nc_cat=108&_nc_oc=AQln6x3VMoM8vCKm5_1Mwdny5ZNXisWip96L987QCzvWILdGUCdfQSgeICRVCaPw7gs&_nc_ht=scontent-yyz1-1.xx&oh=be006270bd1c5b5471d357bece1dc3d6&oe=5E1A8623" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="mailto:quinncmartin@yahoo.com" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>BOOKINGS</p>
+  </a>
+</nav>
 
-<section class="horizontal-snap">
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Defenders-of-the-moon-tee.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Defenders-of-the-moon-tee.jpg" loading="lazy">
-  </picture></a>
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div>  
   
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Statix-Boy-Black-Tee.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Statix-Boy-Black-Tee.jpg" loading="lazy">
-  </picture></a>
   
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Discover-Paradise-Vintage-Black-Scoop.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Discover-Paradise-Vintage-Black-Scoop.jpg" loading="lazy">
-  </picture></a>
   
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/The-Archer-Tee-BLACK.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/The-Archer-Tee-BLACK.jpg" loading="lazy">
-  </picture></a>
   
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Strange-World-Black-Tee.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Strange-World-Black-Tee.jpg" loading="lazy">
-  </picture></a>
   
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Alchemist-Returns-Tee-BLACK.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Alchemist-Returns-Tee-BLACK.jpg" loading="lazy">
-  </picture></a>
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small"></span>Quinn C. Martin</h1>
+    <p>Actor & Stand-Up Comedian</p>
+    <a href="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/1473036_10151830841007945_183051790_n.jpg?_nc_cat=101&_nc_oc=AQlFP5CSfIN9DRLPIMTozTnzwqzHdNGfDLnoA8LvcgyqBUO8f5TnYvyuhcIh3F5ftt8&_nc_ht=scontent-yyz1-1.xx&oh=08f4d354eeb95da57729e4593511522d&oe=5E314A37"><img width = "100%" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/1473036_10151830841007945_183051790_n.jpg?_nc_cat=101&_nc_oc=AQlFP5CSfIN9DRLPIMTozTnzwqzHdNGfDLnoA8LvcgyqBUO8f5TnYvyuhcIh3F5ftt8&_nc_ht=scontent-yyz1-1.xx&oh=08f4d354eeb95da57729e4593511522d&oe=5E314A37"></a>
+  </header></div>
   
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Shred-Seattle-Tee.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Shred-Seattle-Tee.jpg" loading="lazy">
-  </picture></a>
+ <div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <img width = "100%" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/482790_479163305465424_630386397_n.jpg?_nc_cat=110&_nc_oc=AQkeRq2zMu1cGkgqKDvHZucIVSXCqpXMYNbcAfPCESs6KKJ_HKpr2lWWMl_dS_lvTwo&_nc_ht=scontent-yyz1-1.xx&oh=15d003e044fe0ea0ddf2e4e6806733e3&oe=5E1778AA">
+  </header> </div>
   
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/No-Mercy-Vintage-Black-V-Neck.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/No-Mercy-Vintage-Black-V-Neck.jpg" loading="lazy">
-  </picture></a>
+ <!--  
   
-  <a href="https://www.tenhundredart.com/"><picture>
-    <source type="image/webp" srcset="https://intrinsic-layout-guide.glitch.me/img/tees/Elephant-Black-Tank.webp 1x">
-    <img src="https://intrinsic-layout-guide.glitch.me/img/tees/Elephant-Black-Tank.jpg" loading="lazy">
-  </picture></a>
-</section></body>
+ <div class="w3-padding-large" id="main">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img height = "200" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/61723328_10156380704263595_2127914093372243968_n.jpg?_nc_cat=100&_nc_oc=AQm4l0lVvqINhwFgSncAoUHCqOW7pWojDXsK9dGDPy873UP24gO05BenUe2JugzsSpc&_nc_ht=scontent-yyz1-1.xx&oh=26c7195ff6f740bf3a60cdb15cb302e9&oe=5E2C081C" alt="Rush Kazi" style="width:100%">
+      <h3>Testimonial Giver 1</h3>
+      <p class="w3-opacity">Testimonial Giver Title</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img height = "200" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/28056772_10102354378190239_5166031494300358112_n.jpg?_nc_cat=106&_nc_oc=AQlOnVXF-3QskTAH7L8CMpX1NefZR9SoVJHz408mLq1FoBnClU3NrpWCAnwE7VtKrDc&_nc_ht=scontent-yyz1-1.xx&oh=18f7690aa0c20247508002700410a334&oe=5E26A063" alt="Ashley Sirianni" style="width:100%">
+      <h3>Testimonial Giver 2</h3>
+      <p class="w3-opacity">Testimonial Giver Title</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img height = "200" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/10312562_10153736899551271_7968710362926373043_n.jpg?_nc_cat=108&_nc_oc=AQn-np1LNYOhI94O1n2S0mzvqvYWrpLdlTs2uCpyDDvdzXAhryzuIbdUFAUXV_QSrJ8&_nc_ht=scontent-yyz1-1.xx&oh=3ab8b89989736205aee21a339e02c586&oe=5E1CDE4F" alt="Carrie Eklund" style="width:100%">
+      <h3>Testimonial Giver 3</h3>
+      <p class="w3-opacity">Testimonial Giver Title</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img height = "200" src="https://i.cbc.ca/1.5261864.1566940449!/fileImage/httpImage/image.jpg_gen/derivatives/square_620/marty-younge.jpg" alt="Marty Younge" style="width:100%">
+      <h3>Testimonial Giver 4</h3>
+      <p class="w3-opacity">Testimonial Giver Title</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+    </div>
+  </div>  
+  
+ -->
+ 
+
+ 
+    <!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/GIWt2MHVZkU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </header>
+   </div> 
+  <div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <img width = "100%" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/60507_441484769919_7949198_n.jpg?_nc_cat=108&_nc_oc=AQmiSJVogEG2RP8YUNh88qajveT7098BL9EtxobAIZ4RXKAJ1XPZT6DmDVMqNjLK8fU&_nc_ht=scontent-yyz1-1.xx&oh=5679e18c104591e4f934d95ea54444a2&oe=5E635CAA">
+  </header> </div>
+  
+      <!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/8gElYwXrhh0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </header>
+ </div> 
+  
+ <div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <img width = "100%" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/29063470_1945343462174904_8617922690549809152_n.jpg?_nc_cat=111&_nc_oc=AQkuhzpoZvskyTPfrjkzbHaqZ3YHnbKxYKWejPPco4wdj0yIEqr_MZhYpKIA5GqY0ds&_nc_ht=scontent-yyz1-1.xx&oh=c5ac11ea420881d30a4c9d0c65ea8e1e&oe=5E5EAE30">
+  </header> </div>
+
+    <!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/DJeNJdoUNgM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </header>
+   </div> 
+   
+  <div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+    <img width = "100%" src="https://scontent-yyz1-1.xx.fbcdn.net/v/t1.0-9/70450896_3106273169415255_8710267811718496256_n.jpg?_nc_cat=108&_nc_oc=AQkpIzIJZFTeItD0c-PvLaFI_14n1wqFpO-xJLUgAS5IzTGQdyL0aXQF5SuFtBLGaCc&_nc_ht=scontent-yyz1-1.xx&oh=e76f909549e5ea0166579c7c1eac98a5&oe=5E2417A8">
+  </header> </div>
+  
+    <!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/IseJV9nJ4og" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </header>
+   </div> 
+  
+
+  <!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
 </html>
